@@ -1,6 +1,7 @@
 // @flow
 
 import type {Answer, Id, Quiz, QuizzActions} from '../types/qizz.type';
+import type {Dispatch, State} from "../types";
 
 export const loadAllQuestions = (quiz: Quiz): QuizzActions => {
     return {
@@ -38,4 +39,5 @@ export const setQuestionError = (questionId: Id, error: string): QuizzActions =>
         error
     };
 };
+
 

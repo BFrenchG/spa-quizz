@@ -3,7 +3,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import {applyMiddleware, createStore} from 'redux';
 
 import registerServiceWorker from './registerServiceWorker';
 
@@ -12,9 +12,11 @@ import App from './components/app.compoment';
 import reducers from './reducers';
 
 import type {Store} from "./types";
+import thunk from "redux-thunk";
 
 const store: Store = createStore(
     reducers,
+    applyMiddleware(thunk),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 

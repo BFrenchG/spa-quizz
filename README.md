@@ -17,6 +17,7 @@
 <p>
 - separate reducers, actions and type into more appropriate sub components
 - better error handling and clearing
+- redux-saga or observable library to handle cancellation and async data with more grace
 - in depth testing of HTTP performance
 - remove code duplication
 - styling :)

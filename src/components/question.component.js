@@ -15,8 +15,9 @@ export type Props = {
 
 const QuestionCard = ({question, error, handleChange}: Props) => (
     <Card style={{padding: "10px 15px", margin: "15px 0"}}>
+        <h3>{question.title}</h3>
+        <hr/>
         <FormControl component="fieldset" required>
-            <h3>{question.title}</h3>
             {question.options.map(option => (
                 <div key={option.id}>
                     <FormControlLabel value="female" control={

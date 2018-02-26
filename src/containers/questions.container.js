@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import type {Dispatch, State} from '../types/index';
 import type {Props} from '../components/question-page.component';
 import QuestionPage from '../components/question-page.component';
-import type {Id, Question, Quiz} from '../types/qizz.type';
+import type {Answer, Id, Question, Quiz} from '../types/qizz.type';
 import {loadAllQuestions, selectAnswer, setQuestionError, setScore} from '../actions/quiz.actions';
 
 const dummyQuizz: Quiz = {
@@ -49,6 +49,25 @@ const dummyQuizz: Quiz = {
     }]
 };
 
+let dummyAnswers: Array<Answer> = [
+    {
+        questionId: 0,
+        answerId: 1
+    },
+    {
+        questionId: 1,
+        answerId: 3
+    }
+];
+
+export function fetchAnswers(url: string) {
+    return (dispatch: Dispatch, getState: State) => {
+        console.log("trigerred");
+        dispatch(setScore(100));
+    };
+
+}
+
 
 const mapStateToProps = (state: State) => {
     return {
@@ -65,28 +84,29 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
             dispatch(selectAnswer(questionId, optionId));
         },
         onSubmit: (questions: Array<Question>) => {
-
-            let correctCount = 0;
-            let totalCount = questions.length;
             let errorCount = 0;
-
-            console.log(questions);
-
             questions.forEach(question => {
                 if (!question.hasOwnProperty("selected")) {
-                    dispatch(setQuestionError(question.id, "Please review selection"))
+                    dispatch(setQuestionError(question.id, "Please review selection"));
                     errorCount++;
+                }else{
+                    dispatch(setQuestionError(question.id, ""));
+
                 }
-                correctCount++;
             });
 
-            if (errorCount > 0) {
+            if (errorCount !== 0) {
                 return;
             }
-            let percentage = Math.round((correctCount / totalCount) * 100);
-            console.log(percentage);
 
-            dispatch(setScore(percentage));
+            console.log('trying');
+            fetchAnswers("");
+        },
+        setError: (questionId: Id) => {
+            dispatch(setQuestionError(questionId, "Please review selection"))
+        },
+        setScore: (score: number) => {
+            dispatch(setScore(score));
         }
     };
 };
