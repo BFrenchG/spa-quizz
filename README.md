@@ -11,3 +11,13 @@
 
 <h5>To run optimised build (no server/hosting provider):</h5>
 <p>yarn build || npm run build</p>
+
+
+<h1>Future Improvements</h1>
+<p>
+- separate reducers, actions and type into more appropriate sub components
+- better error handling and clearing
+- in depth testing of HTTP performance
+- remove code duplication
+- styling :)
+</p>

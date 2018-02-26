@@ -1,8 +1,33 @@
+// @flow
+
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import './index.css';
+import App from './components/app.compoment';
+import reducers from './reducers';
+
+import type {Store} from "./types";
+
+const store: Store = createStore(
+    reducers,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+const element = document.getElementById('root');
+if (!element) {
+    throw new Error("couldn't find element with id root")
+}
+
+render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    element
+);
+
 registerServiceWorker();
