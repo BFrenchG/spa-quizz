@@ -17,7 +17,8 @@ export type Question = {
     +title: string,
     +options: Array<Option>,
     +selected?: Id,
-    +error: string
+    +warning: boolean,
+    +info: string
 };
 
 export type Answer = {
@@ -31,7 +32,8 @@ export type Quiz = {
     +questions: Array<Question>,
     +answers?:  Array<Answer>,
     +score?: number,
-    +error?: string
+    +error?: string,
+    +isLoading: boolean
 };
 
 export type QuizzState = {
@@ -39,9 +41,10 @@ export type QuizzState = {
 };
 
 export type QuizzActions =
-    | { type: 'LOAD_QUIZZ', +quiz: Quiz }
+    | { type: 'LOAD_QUIZ', +quiz: Quiz }
     | { type: 'LOAD_ANSWERS', +answers: Array<Answer> }
+    | { type: 'QUIZ_LOADING', +isLoading: boolean }
     | { type: 'SELECT_ANSWER', +questionId: Id, +optionId: Id }
     | { type: 'SET_SCORE', +score: number }
-    | { type: 'SET_QUESTION_ERROR', +questionId: Id, +error: string }
-    | { type: 'SET_QUIZZ_ERROR', +error: string };
+    | { type: 'SET_QUESTION_INFO', +questionId: Id, +info: string, +warning: boolean}
+    | { type: 'SET_QUIZ_ERROR', +error: string };

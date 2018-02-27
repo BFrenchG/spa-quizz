@@ -1,21 +1,27 @@
 // @flow
 
-import type {Answer, Id, Quiz, QuizzActions} from '../types/qizz.type';
-import type {GetState} from "../types/qizz.type";
-import type {Dispatch} from "../types";
-import QuizApi from "../api/mockQuizApi";
+import type {Answer, GetState, Id, Quiz, QuizzActions} from '../types/qizz.type';
+import type {Dispatch} from '../types';
+import QuizApi from '../api/mockQuizApi';
 
 export const loadAllQuestions = (quiz: Quiz): QuizzActions => {
     return {
-        type: 'LOAD_QUIZZ',
+        type: 'LOAD_QUIZ',
         quiz
     };
 };
 
-export const loadAllAnswers = (answers: Array<Answer>): QuizzActions => {
+export const loadingQuestions = (isLoading: boolean): QuizzActions => {
     return {
-        type: 'LOAD_ANSWERS',
-        answers
+        type: 'QUIZ_LOADING',
+        isLoading
+    };
+};
+
+export const setQuizError = (error: string): QuizzActions => {
+    return {
+        type: 'SET_QUIZ_ERROR',
+        error
     };
 };
 
@@ -34,44 +40,57 @@ export const setScore = (score: number): QuizzActions => {
     };
 };
 
-export const setQuestionError = (questionId: Id, error: string): QuizzActions => {
+export const setQuestionInfo = (questionId: Id, info: string, warning: boolean): QuizzActions => {
     return {
-        type: 'SET_QUESTION_ERROR',
+        type: 'SET_QUESTION_INFO',
         questionId,
-        error
+        info,
+        warning
     };
 };
 
 export function fetchQuiz(url: string) {
     return (dispatch: Dispatch) => {
-        QuizApi.getQuiz()
+        dispatch(loadingQuestions(true));
+        return QuizApi.getQuiz()
             .then((quiz) => {
                 dispatch(loadAllQuestions(quiz));
+                dispatch(loadingQuestions(false));
             })
+            .catch(error => {
+                dispatch(setQuizError(error));
+                dispatch(loadingQuestions(false));
+            });
     };
 
 }
 
 export function fetchAnswers(url: string) {
     return (dispatch: Dispatch, getState: GetState) => {
-        QuizApi.getAnswers().then(answers => {
-            const { quiz } = getState();
+        QuizApi.getAnswers()
+            .then(answers => {
+                const {quiz} = getState();
 
-            let questions = quiz.questions;
-            let totalQuestions = questions.length;
-            let correctAnswers = 0;
+                let questions = quiz.questions;
+                let totalQuestions = questions.length;
+                let correctAnswers = 0;
 
-            questions.forEach(question => {
-                let answerKey: Answer = answers.find(answer => answer.questionId === question.id);
+                questions.forEach(question => {
+                    let answerKey: Answer = answers.find(answer => answer.questionId === question.id);
+                    if (answerKey.answerId.toString() === question.selected) {
+                        dispatch(setQuestionInfo(answerKey.questionId, 'Correct!', false));
+                        correctAnswers++;
+                    } else {
+                        dispatch(setQuestionInfo(answerKey.questionId, 'Correct answer was: "' + question.options[answerKey.answerId].option + '"', true));
+                    }
+                });
 
-                if(answerKey.answerId.toString() === question.selected){
-                    correctAnswers++;
-                }
+                let percentage = Math.round((correctAnswers / totalQuestions) * 100);
+                dispatch(setScore(percentage));
+            }).catch(error => {
+                dispatch(setQuizError(error));
+                dispatch(loadingQuestions(false));
             });
-
-            let percentage = Math.round((correctAnswers / totalQuestions) * 100);
-            dispatch(setScore(percentage));
-        });
     };
 
 }

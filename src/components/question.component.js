@@ -9,11 +9,11 @@ import FormControlLabel from "material-ui/es/Form/FormControlLabel";
 
 export type Props = {
     question: Question,
-    error: string,
+    quizSubmitted: boolean,
     handleChange: (questionId: Id, optionId: Id) => void
 }
 
-const QuestionCard = ({question, error, handleChange}: Props) => (
+const QuestionCard = ({question, quizSubmitted, handleChange}: Props) => (
     <Card style={{padding: "10px 15px", margin: "15px 0"}}>
         <h3>{question.title}</h3>
         <hr/>
@@ -27,11 +27,12 @@ const QuestionCard = ({question, error, handleChange}: Props) => (
                             onChange={(e) => handleChange(question.id, e.currentTarget.value)}
                             value={option.id.toString()}
                             label={option.option}
+                            disabled={quizSubmitted}
                         />
                     } label={option.option}/>
                 </div>
             ))}
-            <p style={{color: "red"}}>{error}</p>
+            <p style={ (question.warning) ? {color: "red"} : {color: "black"}}>{question.info}</p>
         </FormControl>
     </Card>
 );

@@ -1,43 +1,56 @@
 import delay from './delay';
-import type {Answer, Quiz} from "../types/qizz.type";
+import type {Answer, Quiz} from '../types/qizz.type';
 
 const dummyQuizz: Quiz = {
     id: 0,
-    title: "Test Quiz",
+    title: 'Random Quiz',
     questions: [{
         id: 0,
-        title: 'test Question',
+        title: 'Capital of England',
         options: [{
             id: 0,
-            option: 'this is one option'
+            option: 'Lyon'
         }, {
             id: 1,
-            option: 'this is another option'
+            option: 'Lodon'
         }, {
             id: 2,
-            option: 'this is one option'
-        }, {
-            id: 3,
-            option: 'this is another option'
+            option: 'Paris'
         }],
-        error: ""
+        info: ''
     }, {
         id: 1,
-        title: 'test Question 1',
+        title: 'React is awesome',
         options: [{
             id: 0,
-            option: 'this is one option'
+            option: 'True'
         }, {
             id: 1,
-            option: 'this is another option'
-        }, {
-            id: 2,
-            option: 'this is one option'
-        }, {
-            id: 3,
-            option: 'this is another option'
+            option: 'False'
         }],
-        error: ""
+        info: ''
+    }, {
+        id: 2,
+        title: 'Flow is powerful',
+        options: [{
+            id: 0,
+            option: 'True'
+        }, {
+            id: 1,
+            option: 'False'
+        }],
+        info: ''
+    }, {
+        id: 3,
+        title: 'Marmite is great',
+        options: [{
+            id: 0,
+            option: 'True'
+        }, {
+            id: 1,
+            option: 'False'
+        }],
+        info: ''
     }]
 };
 
@@ -48,7 +61,15 @@ let dummyAnswers: Array<Answer> = [
     },
     {
         questionId: 1,
-        answerId: 3
+        answerId: 0
+    },
+    {
+        questionId: 2,
+        answerId: 0
+    },
+    {
+        questionId: 3,
+        answerId: 1
     }
 ];
 
@@ -56,16 +77,22 @@ class QuizApi {
     static getQuiz() {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(Object.assign([], dummyQuizz));
+                if (delay < 3000) {
+                    resolve(Object.assign([], dummyQuizz));
+                } else {
+                    reject('Page Load Timeout');
+                }
             }, delay);
         });
     }
 
     static getAnswers(author) {
         return new Promise((resolve, reject) => {
-            setTimeout(() => {
+            if (delay < 2000) {
                 resolve(Object.assign([], dummyAnswers));
-            }, delay);
+            } else {
+                reject('Answer Load Timeout');
+            }
         });
     }
 }
