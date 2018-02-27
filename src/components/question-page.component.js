@@ -35,16 +35,13 @@ class QuestionPage extends Component<Props> {
             return <Score score={this.props.quiz.score}/>
         } else {
             return (
-                <div>
-                    <Button onClick={this.props.onSubmit.bind(this, this.props.quiz.questions)}
-                            variant="raised"
-                            color="secondary"
-                            style={{marginLeft: "2px"}}
-                    >
-                        Submit
-                    </Button>
-                    <hr/>
-                </div>
+                <Button onClick={this.props.onSubmit.bind(this, this.props.quiz.questions)}
+                        variant="raised"
+                        color="secondary"
+                        style={{marginLeft: "2px"}}
+                >
+                    Submit
+                </Button>
             )
         }
     };
@@ -64,7 +61,6 @@ class QuestionPage extends Component<Props> {
                     ))
                 }
                 {this.displayScore()}
-
             </div>
         )
     };

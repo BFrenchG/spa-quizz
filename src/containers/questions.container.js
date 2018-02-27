@@ -6,67 +6,8 @@ import {connect} from 'react-redux';
 import type {Dispatch, State} from '../types/index';
 import type {Props} from '../components/question-page.component';
 import QuestionPage from '../components/question-page.component';
-import type {Answer, Id, Question, Quiz} from '../types/qizz.type';
-import {loadAllQuestions, selectAnswer, setQuestionError, setScore} from '../actions/quiz.actions';
-
-const dummyQuizz: Quiz = {
-    id: 0,
-    title: "Test Quiz",
-    questions: [{
-        id: 0,
-        title: 'test Question',
-        options: [{
-            id: 0,
-            option: 'this is one option'
-        }, {
-            id: 1,
-            option: 'this is another option'
-        }, {
-            id: 2,
-            option: 'this is one option'
-        }, {
-            id: 3,
-            option: 'this is another option'
-        }],
-        error: ""
-    }, {
-        id: 1,
-        title: 'test Question 1',
-        options: [{
-            id: 0,
-            option: 'this is one option'
-        }, {
-            id: 1,
-            option: 'this is another option'
-        }, {
-            id: 2,
-            option: 'this is one option'
-        }, {
-            id: 3,
-            option: 'this is another option'
-        }],
-        error: ""
-    }]
-};
-
-let dummyAnswers: Array<Answer> = [
-    {
-        questionId: 0,
-        answerId: 1
-    },
-    {
-        questionId: 1,
-        answerId: 3
-    }
-];
-
-export function fetchAnswers(url: string) {
-    return (dispatch: Dispatch, getState: State) => {
-        console.log("trigerred");
-        dispatch(setScore(100));
-    };
-
-}
+import type {Id, Question} from '../types/qizz.type';
+import {fetchAnswers, fetchQuiz, selectAnswer, setQuestionError} from '../actions/quiz.actions';
 
 
 const mapStateToProps = (state: State) => {
@@ -78,7 +19,7 @@ const mapStateToProps = (state: State) => {
 const mapDispatchToProps = (dispatch: Dispatch) => {
     return {
         getQuestions: () => {
-            dispatch(loadAllQuestions(dummyQuizz))
+            dispatch(fetchQuiz("/dummy/url"));
         },
         onOptionSelect: (questionId: Id, optionId: Id) => {
             dispatch(selectAnswer(questionId, optionId));
@@ -99,15 +40,8 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
                 return;
             }
 
-            console.log('trying');
-            fetchAnswers("");
+            dispatch(fetchAnswers("/dummy/url"));
         },
-        setError: (questionId: Id) => {
-            dispatch(setQuestionError(questionId, "Please review selection"))
-        },
-        setScore: (score: number) => {
-            dispatch(setScore(score));
-        }
     };
 };
 

@@ -1,5 +1,10 @@
 // @flow
 
+
+import type {State} from "./index";
+
+export type GetState = () => State;
+
 export type Id = number;
 
 export type Option = {

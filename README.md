@@ -19,6 +19,7 @@
 - better error handling and clearing
 - redux-saga or observable library to handle cancellation and async data with more grace
 - in depth testing of HTTP performance
+- move some logic to server side epending on size of question set
 - remove code duplication
 - styling :)
 </p>
