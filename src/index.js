@@ -1,9 +1,9 @@
 // @flow
 
 import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-import {applyMiddleware, compose, createStore} from 'redux';
+import {render} from 'react-dom';
+import {Provider} from 'react-redux';
+import {applyMiddleware, createStore} from 'redux';
 
 import registerServiceWorker from './registerServiceWorker';
 
@@ -16,10 +16,7 @@ import thunk from "redux-thunk";
 
 const store: Store = createStore(
     reducers,
-    compose(
-        applyMiddleware(thunk),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-    )
+    applyMiddleware(thunk)
 );
 
 const element = document.getElementById('root');
@@ -29,7 +26,7 @@ if (!element) {
 
 render(
     <Provider store={store}>
-        <App />
+        <App/>
     </Provider>,
     element
 );
