@@ -14,15 +14,15 @@
 
 
 <h1>Needs Improvements:</h1>
-<p>
-- use something like fetch mock to allow for testing of mock HTTP requests and allow for exception testing
-- separate reducers, actions and type into more appropriate sub components (currently coupling the scoring/submission to the quizz)
-- more thorough testing of component
-- better error handling and clearing
-- redux-saga or observable library to handle cancellation and async data with more grace
-- in depth testing of HTTP performance
-- move some logic to server side epending on size of question set
-- remove code duplication
-- heavier use of flow in testing
-- styling :)
-</p>
+<ul>
+    <li> use something like fetch mock to allow for testing of mock HTTP requests and allow for exception testing</li>
+    <li> separate reducers, actions and type into more appropriate sub components (currently coupling the scoring/submission to the quizz)</li>
+    <li> more thorough testing of component</li>
+    <li> better error handling and clearing</li>
+    <li> redux-saga or observable library to handle cancellation and async data with more grace</li>
+    <li> in depth testing of HTTP performance</li>
+    <li> move some logic to server side epending on size of question set</li>
+    <li> remove code duplication</li>
+    <li> heavier use of flow in testing</li>
+    <li> styling :) </li>
+</ul>
