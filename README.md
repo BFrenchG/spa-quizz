@@ -4,6 +4,7 @@
 <p>Built based on create-react app starter and redux using flow for static typing and material-ui for view styling.</p>
 
 <h5>To run locally:</h5>
+<p>Install node modules</p>
 <p>yarn start || npm start</p>
 
 <h5>To run tests:</h5>
