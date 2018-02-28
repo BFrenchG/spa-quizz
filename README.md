@@ -8,6 +8,7 @@
 <p>yarn start || npm start</p>
 
 <h5>To run tests:</h5>
+<p>Dependent on jest CLI</p>
 <p>yarn test || npm run test</p>
 
 <h5>To run optimised build (no server/hosting provider):</h5>
