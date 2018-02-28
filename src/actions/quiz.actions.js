@@ -4,7 +4,7 @@ import type {Answer, GetState, Id, Quiz, QuizzActions} from '../types/qizz.type'
 import type {Dispatch} from '../types';
 import QuizApi from '../api/mockQuizApi';
 
-export const loadAllQuestions = (quiz: Quiz): QuizzActions => {
+export const loadQuiz = (quiz: Quiz): QuizzActions => {
     return {
         type: 'LOAD_QUIZ',
         quiz
@@ -54,7 +54,7 @@ export function fetchQuiz(url: string) {
         dispatch(loadingQuestions(true));
         return QuizApi.getQuiz()
             .then((quiz) => {
-                dispatch(loadAllQuestions(quiz));
+                dispatch(loadQuiz(quiz));
                 dispatch(loadingQuestions(false));
             })
             .catch(error => {
@@ -67,10 +67,9 @@ export function fetchQuiz(url: string) {
 
 export function fetchAnswers(url: string) {
     return (dispatch: Dispatch, getState: GetState) => {
-        QuizApi.getAnswers()
+        return QuizApi.getAnswers()
             .then(answers => {
                 const {quiz} = getState();
-
                 let questions = quiz.questions;
                 let totalQuestions = questions.length;
                 let correctAnswers = 0;
@@ -86,10 +85,10 @@ export function fetchAnswers(url: string) {
                 });
 
                 let percentage = Math.round((correctAnswers / totalQuestions) * 100);
+                dispatch(setQuizError(""));
                 dispatch(setScore(percentage));
             }).catch(error => {
                 dispatch(setQuizError(error));
-                dispatch(loadingQuestions(false));
             });
     };
 

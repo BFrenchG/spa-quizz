@@ -1,12 +1,13 @@
 // @flow
 
 import {
-    loadAllQuestions, fetchAnswers, loadingQuestions, selectAnswer, setScore,
-    setQuestionInfo, setQuizError
+    loadQuiz, fetchAnswers, loadingQuestions, selectAnswer, setScore,
+    setQuestionInfo, setQuizError, fetchQuiz
 } from '../../actions/quiz.actions';
 import quiz from '../../reducers/quiz.reducer';
 import type {Quiz} from "../../types/qizz.type";
-import {dummyQuiz} from "../test-helpers/test.data";
+import {answeredQuiz, dummyQuiz} from "../utils/test.data";
+import {mockStore} from "../utils/mock.store";
 
 const defaultQuiz: Quiz = {
     id: 0,
@@ -18,8 +19,36 @@ const defaultQuiz: Quiz = {
 
 describe('todos reducer', () => {
 
+    it('should dispatch LOAD_QUIZ and set QUIZ_LOADING during load or ERROR', () => {
+        const store = mockStore({quiz: defaultQuiz});
+        return store.dispatch(fetchQuiz("/url"))
+            .then(() => {
+                const actions = store.getActions();
+                expect(actions[0]).toEqual(loadingQuestions(true));
+                expect(actions[1]).toEqual(loadQuiz(defaultQuiz));
+                expect(actions[2]).toEqual(loadingQuestions(false));
+            })
+            .catch(() => {
+                const actions = store.getActions();
+                console.log(actions);
+            })
+    });
+
+    it('should dispatch SET_SCORE and QUIZ_ERROR when quiz data is returned', () => {
+        const store = mockStore({quiz: answeredQuiz});
+
+        return store.dispatch(fetchAnswers("/url"))
+            .then(() => {
+                const actions = store.getActions();
+                console.log(actions);
+                expect(actions[0]).toEqual(setQuestionInfo(0, 'Correct answer was: "Lodon"' ,true));
+                expect(actions[1]).toEqual(setQuizError(''));
+                expect(actions[2]).toEqual(setScore(0));
+            })
+    });
+
     it('should handle LOAD_QUIZ', () => {
-        expect(quiz(defaultQuiz, loadAllQuestions(dummyQuiz))).toEqual(
+        expect(quiz(defaultQuiz, loadQuiz(dummyQuiz))).toEqual(
             dummyQuiz
         );
     });

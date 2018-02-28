@@ -13,14 +13,16 @@
 <p>yarn build || npm run build</p>
 
 
-<h1>Future Improvements</h1>
+<h1>Needs Improvements:</h1>
 <p>
-- separate reducers, actions and type into more appropriate sub components
-- more thorough testing of component display
+- use something like fetch mock to allow for testing of mock HTTP requests and allow for exception testing
+- separate reducers, actions and type into more appropriate sub components (currently coupling the scoring/submission to the quizz)
+- more thorough testing of component
 - better error handling and clearing
 - redux-saga or observable library to handle cancellation and async data with more grace
 - in depth testing of HTTP performance
 - move some logic to server side epending on size of question set
 - remove code duplication
+- heavier use of flow in testing
 - styling :)
 </p>

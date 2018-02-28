@@ -4,7 +4,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 
 import QuestionCard from '../../components/question.component';
-import {dummyQuiz} from "../test-helpers/test.data";
+import {dummyQuiz} from "../utils/test.data";
 
 const setup = (setupProps = {}) => {
 

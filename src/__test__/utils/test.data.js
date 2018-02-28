@@ -50,3 +50,28 @@ export const dummyQuiz: Quiz = {
         info: ''
     }]
 };
+
+export const answeredQuiz: Quiz = {
+    id: 0,
+    title: 'Random Quiz',
+    questions: [{
+        id: 0,
+        title: 'Capital of England',
+        options: [{
+            id: 0,
+            option: 'Lyon'
+        }, {
+            id: 1,
+            option: 'Lodon'
+        }, {
+            id: 2,
+            option: 'Paris'
+        }],
+        info: ''
+    }]
+};
+
+export const dummyAnswer: Array<Answer> = [{
+    answerId: 1,
+    questionId: 0
+}];
