@@ -19,31 +19,49 @@ const defaultQuiz: Quiz = {
 
 describe('todos reducer', () => {
 
-    it('should dispatch LOAD_QUIZ and set QUIZ_LOADING during load or ERROR', () => {
-        const store = mockStore({quiz: defaultQuiz});
-        return store.dispatch(fetchQuiz("/url"))
+    it('should dispatch LOAD_QUIZ and set QUIZ_LOADING during load', () => {
+        const store = mockStore();
+        return store.dispatch(fetchQuiz("/url", 0))
             .then(() => {
                 const actions = store.getActions();
                 expect(actions[0]).toEqual(loadingQuestions(true));
-                expect(actions[1]).toEqual(loadQuiz(defaultQuiz));
+                expect(actions[1].type).toEqual(loadQuiz().type);
                 expect(actions[2]).toEqual(loadingQuestions(false));
             })
-            .catch(() => {
+    });
+
+    it('should dispatch LOAD_QUIZ and set QUIZ_ERROR when thrown', () => {
+        const store = mockStore({quiz: defaultQuiz});
+        return store.dispatch(fetchQuiz("/url", 2500))
+            .then(() => {
                 const actions = store.getActions();
-                console.log(actions);
+                expect(actions[0]).toEqual(loadingQuestions(true));
+                expect(actions[1]).toEqual(setQuizError('Page Load Timeout'));
+                expect(actions[2]).toEqual(loadingQuestions(false));
             })
     });
+
 
     it('should dispatch SET_SCORE and QUIZ_ERROR when quiz data is returned', () => {
         const store = mockStore({quiz: answeredQuiz});
 
-        return store.dispatch(fetchAnswers("/url"))
+        return store.dispatch(fetchAnswers("/url", 0))
+            .then(() => {
+                const actions = store.getActions();
+                expect(actions[0]).toEqual(setQuestionInfo(0, 'Correct answer was: "London"', true));
+                expect(actions[1]).toEqual(setQuizError(''));
+                expect(actions[2]).toEqual(setScore(0));
+            })
+    });
+
+    it('should dispatch QUIZ_ERROR when thrown', () => {
+        const store = mockStore({quiz: answeredQuiz});
+
+        return store.dispatch(fetchAnswers("/url", 2500))
             .then(() => {
                 const actions = store.getActions();
                 console.log(actions);
-                expect(actions[0]).toEqual(setQuestionInfo(0, 'Correct answer was: "Lodon"' ,true));
-                expect(actions[1]).toEqual(setQuizError(''));
-                expect(actions[2]).toEqual(setScore(0));
+                expect(actions[0]).toEqual(setQuizError('Answer Load Timeout'));
             })
     });
 

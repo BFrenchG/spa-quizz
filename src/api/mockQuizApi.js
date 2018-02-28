@@ -1,4 +1,3 @@
-import delay from './delay';
 import type {Answer, Quiz} from '../types/qizz.type';
 
 const dummyQuizz: Quiz = {
@@ -12,7 +11,7 @@ const dummyQuizz: Quiz = {
             option: 'Lyon'
         }, {
             id: 1,
-            option: 'Lodon'
+            option: 'London'
         }, {
             id: 2,
             option: 'Paris'
@@ -54,7 +53,7 @@ const dummyQuizz: Quiz = {
     }]
 };
 
-let dummyAnswers: Array<Answer> = [
+const dummyAnswers: Array<Answer> = [
     {
         questionId: 0,
         answerId: 1
@@ -73,11 +72,15 @@ let dummyAnswers: Array<Answer> = [
     }
 ];
 
+const timeout: number = 2000;
+
 class QuizApi {
-    static getQuiz() {
+
+
+    static getQuiz(delay: number) {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                if (delay < 3000) {
+                if (delay < timeout) {
                     resolve(Object.assign([], dummyQuizz));
                 } else {
                     reject('Page Load Timeout');
@@ -86,9 +89,9 @@ class QuizApi {
         });
     }
 
-    static getAnswers(author) {
+    static getAnswers(delay: number) {
         return new Promise((resolve, reject) => {
-            if (delay < 2000) {
+            if (delay < timeout) {
                 resolve(Object.assign([], dummyAnswers));
             } else {
                 reject('Answer Load Timeout');

@@ -17,7 +17,7 @@ ShallowWrapper {
           },
           Object {
             "id": 1,
-            "option": "Lodon",
+            "option": "London",
           },
           Object {
             "id": 2,
@@ -71,12 +71,12 @@ ShallowWrapper {
                 <WithStyles(Radio)
                   checked={false}
                   disabled={undefined}
-                  label="Lodon"
+                  label="London"
                   onChange={[Function]}
                   value="1"
                 />
               }
-              label="Lodon"
+              label="London"
               value="female"
             />
           </div>
@@ -162,12 +162,12 @@ ShallowWrapper {
                     <WithStyles(Radio)
                       checked={false}
                       disabled={undefined}
-                      label="Lodon"
+                      label="London"
                       onChange={[Function]}
                       value="1"
                     />
                   }
-                  label="Lodon"
+                  label="London"
                   value="female"
                 />
               </div>,
@@ -253,12 +253,12 @@ ShallowWrapper {
                   <WithStyles(Radio)
                     checked={false}
                     disabled={undefined}
-                    label="Lodon"
+                    label="London"
                     onChange={[Function]}
                     value="1"
                   />
                 }
-                label="Lodon"
+                label="London"
                 value="female"
               />,
             },
@@ -271,11 +271,11 @@ ShallowWrapper {
                 "control": <WithStyles(Radio)
                   checked={false}
                   disabled={undefined}
-                  label="Lodon"
+                  label="London"
                   onChange={[Function]}
                   value="1"
                 />,
-                "label": "Lodon",
+                "label": "London",
                 "value": "female",
               },
               "ref": null,
@@ -381,12 +381,12 @@ ShallowWrapper {
                   <WithStyles(Radio)
                     checked={false}
                     disabled={undefined}
-                    label="Lodon"
+                    label="London"
                     onChange={[Function]}
                     value="1"
                   />
                 }
-                label="Lodon"
+                label="London"
                 value="female"
               />
             </div>
@@ -472,12 +472,12 @@ ShallowWrapper {
                       <WithStyles(Radio)
                         checked={false}
                         disabled={undefined}
-                        label="Lodon"
+                        label="London"
                         onChange={[Function]}
                         value="1"
                       />
                     }
-                    label="Lodon"
+                    label="London"
                     value="female"
                   />
                 </div>,
@@ -563,12 +563,12 @@ ShallowWrapper {
                     <WithStyles(Radio)
                       checked={false}
                       disabled={undefined}
-                      label="Lodon"
+                      label="London"
                       onChange={[Function]}
                       value="1"
                     />
                   }
-                  label="Lodon"
+                  label="London"
                   value="female"
                 />,
               },
@@ -581,11 +581,11 @@ ShallowWrapper {
                   "control": <WithStyles(Radio)
                     checked={false}
                     disabled={undefined}
-                    label="Lodon"
+                    label="London"
                     onChange={[Function]}
                     value="1"
                   />,
-                  "label": "Lodon",
+                  "label": "London",
                   "value": "female",
                 },
                 "ref": null,
@@ -683,7 +683,7 @@ ShallowWrapper {
           },
           Object {
             "id": 1,
-            "option": "Lodon",
+            "option": "London",
           },
           Object {
             "id": 2,
@@ -737,12 +737,12 @@ ShallowWrapper {
                 <WithStyles(Radio)
                   checked={false}
                   disabled={undefined}
-                  label="Lodon"
+                  label="London"
                   onChange={[Function]}
                   value="1"
                 />
               }
-              label="Lodon"
+              label="London"
               value="female"
             />
           </div>
@@ -828,12 +828,12 @@ ShallowWrapper {
                     <WithStyles(Radio)
                       checked={false}
                       disabled={undefined}
-                      label="Lodon"
+                      label="London"
                       onChange={[Function]}
                       value="1"
                     />
                   }
-                  label="Lodon"
+                  label="London"
                   value="female"
                 />
               </div>,
@@ -919,12 +919,12 @@ ShallowWrapper {
                   <WithStyles(Radio)
                     checked={false}
                     disabled={undefined}
-                    label="Lodon"
+                    label="London"
                     onChange={[Function]}
                     value="1"
                   />
                 }
-                label="Lodon"
+                label="London"
                 value="female"
               />,
             },
@@ -937,11 +937,11 @@ ShallowWrapper {
                 "control": <WithStyles(Radio)
                   checked={false}
                   disabled={undefined}
-                  label="Lodon"
+                  label="London"
                   onChange={[Function]}
                   value="1"
                 />,
-                "label": "Lodon",
+                "label": "London",
                 "value": "female",
               },
               "ref": null,
@@ -1047,12 +1047,12 @@ ShallowWrapper {
                   <WithStyles(Radio)
                     checked={false}
                     disabled={undefined}
-                    label="Lodon"
+                    label="London"
                     onChange={[Function]}
                     value="1"
                   />
                 }
-                label="Lodon"
+                label="London"
                 value="female"
               />
             </div>
@@ -1138,12 +1138,12 @@ ShallowWrapper {
                       <WithStyles(Radio)
                         checked={false}
                         disabled={undefined}
-                        label="Lodon"
+                        label="London"
                         onChange={[Function]}
                         value="1"
                       />
                     }
-                    label="Lodon"
+                    label="London"
                     value="female"
                   />
                 </div>,
@@ -1229,12 +1229,12 @@ ShallowWrapper {
                     <WithStyles(Radio)
                       checked={false}
                       disabled={undefined}
-                      label="Lodon"
+                      label="London"
                       onChange={[Function]}
                       value="1"
                     />
                   }
-                  label="Lodon"
+                  label="London"
                   value="female"
                 />,
               },
@@ -1247,11 +1247,11 @@ ShallowWrapper {
                   "control": <WithStyles(Radio)
                     checked={false}
                     disabled={undefined}
-                    label="Lodon"
+                    label="London"
                     onChange={[Function]}
                     value="1"
                   />,
-                  "label": "Lodon",
+                  "label": "London",
                   "value": "female",
                 },
                 "ref": null,
@@ -1349,7 +1349,7 @@ ShallowWrapper {
           },
           Object {
             "id": 1,
-            "option": "Lodon",
+            "option": "London",
           },
           Object {
             "id": 2,
@@ -1403,12 +1403,12 @@ ShallowWrapper {
                 <WithStyles(Radio)
                   checked={false}
                   disabled={undefined}
-                  label="Lodon"
+                  label="London"
                   onChange={[Function]}
                   value="1"
                 />
               }
-              label="Lodon"
+              label="London"
               value="female"
             />
           </div>
@@ -1494,12 +1494,12 @@ ShallowWrapper {
                     <WithStyles(Radio)
                       checked={false}
                       disabled={undefined}
-                      label="Lodon"
+                      label="London"
                       onChange={[Function]}
                       value="1"
                     />
                   }
-                  label="Lodon"
+                  label="London"
                   value="female"
                 />
               </div>,
@@ -1585,12 +1585,12 @@ ShallowWrapper {
                   <WithStyles(Radio)
                     checked={false}
                     disabled={undefined}
-                    label="Lodon"
+                    label="London"
                     onChange={[Function]}
                     value="1"
                   />
                 }
-                label="Lodon"
+                label="London"
                 value="female"
               />,
             },
@@ -1603,11 +1603,11 @@ ShallowWrapper {
                 "control": <WithStyles(Radio)
                   checked={false}
                   disabled={undefined}
-                  label="Lodon"
+                  label="London"
                   onChange={[Function]}
                   value="1"
                 />,
-                "label": "Lodon",
+                "label": "London",
                 "value": "female",
               },
               "ref": null,
@@ -1713,12 +1713,12 @@ ShallowWrapper {
                   <WithStyles(Radio)
                     checked={false}
                     disabled={undefined}
-                    label="Lodon"
+                    label="London"
                     onChange={[Function]}
                     value="1"
                   />
                 }
-                label="Lodon"
+                label="London"
                 value="female"
               />
             </div>
@@ -1804,12 +1804,12 @@ ShallowWrapper {
                       <WithStyles(Radio)
                         checked={false}
                         disabled={undefined}
-                        label="Lodon"
+                        label="London"
                         onChange={[Function]}
                         value="1"
                       />
                     }
-                    label="Lodon"
+                    label="London"
                     value="female"
                   />
                 </div>,
@@ -1895,12 +1895,12 @@ ShallowWrapper {
                     <WithStyles(Radio)
                       checked={false}
                       disabled={undefined}
-                      label="Lodon"
+                      label="London"
                       onChange={[Function]}
                       value="1"
                     />
                   }
-                  label="Lodon"
+                  label="London"
                   value="female"
                 />,
               },
@@ -1913,11 +1913,11 @@ ShallowWrapper {
                   "control": <WithStyles(Radio)
                     checked={false}
                     disabled={undefined}
-                    label="Lodon"
+                    label="London"
                     onChange={[Function]}
                     value="1"
                   />,
-                  "label": "Lodon",
+                  "label": "London",
                   "value": "female",
                 },
                 "ref": null,

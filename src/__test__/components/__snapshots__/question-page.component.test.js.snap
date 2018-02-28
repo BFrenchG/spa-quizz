@@ -28,7 +28,7 @@ ShallowWrapper {
               },
               Object {
                 "id": 1,
-                "option": "Lodon",
+                "option": "London",
               },
               Object {
                 "id": 2,
@@ -125,7 +125,7 @@ ShallowWrapper {
                   },
                   Object {
                     "id": 1,
-                    "option": "Lodon",
+                    "option": "London",
                   },
                   Object {
                     "id": 2,
@@ -258,7 +258,7 @@ ShallowWrapper {
               },
               Object {
                 "id": 1,
-                "option": "Lodon",
+                "option": "London",
               },
               Object {
                 "id": 2,
@@ -407,7 +407,7 @@ ShallowWrapper {
                     },
                     Object {
                       "id": 1,
-                      "option": "Lodon",
+                      "option": "London",
                     },
                     Object {
                       "id": 2,
@@ -540,7 +540,7 @@ ShallowWrapper {
                 },
                 Object {
                   "id": 1,
-                  "option": "Lodon",
+                  "option": "London",
                 },
                 Object {
                   "id": 2,
@@ -696,7 +696,7 @@ ShallowWrapper {
               },
               Object {
                 "id": 1,
-                "option": "Lodon",
+                "option": "London",
               },
               Object {
                 "id": 2,
@@ -793,7 +793,7 @@ ShallowWrapper {
                   },
                   Object {
                     "id": 1,
-                    "option": "Lodon",
+                    "option": "London",
                   },
                   Object {
                     "id": 2,
@@ -926,7 +926,7 @@ ShallowWrapper {
               },
               Object {
                 "id": 1,
-                "option": "Lodon",
+                "option": "London",
               },
               Object {
                 "id": 2,
@@ -1075,7 +1075,7 @@ ShallowWrapper {
                     },
                     Object {
                       "id": 1,
-                      "option": "Lodon",
+                      "option": "London",
                     },
                     Object {
                       "id": 2,
@@ -1208,7 +1208,7 @@ ShallowWrapper {
                 },
                 Object {
                   "id": 1,
-                  "option": "Lodon",
+                  "option": "London",
                 },
                 Object {
                   "id": 2,

@@ -3,6 +3,7 @@
 import type {Answer, GetState, Id, Quiz, QuizzActions} from '../types/qizz.type';
 import type {Dispatch} from '../types';
 import QuizApi from '../api/mockQuizApi';
+import delay from "../api/delay";
 
 export const loadQuiz = (quiz: Quiz): QuizzActions => {
     return {
@@ -49,10 +50,10 @@ export const setQuestionInfo = (questionId: Id, info: string, warning: boolean):
     };
 };
 
-export function fetchQuiz(url: string) {
+export function fetchQuiz(url: string, time: number = delay) {
     return (dispatch: Dispatch) => {
         dispatch(loadingQuestions(true));
-        return QuizApi.getQuiz()
+        return QuizApi.getQuiz(time)
             .then((quiz) => {
                 dispatch(loadQuiz(quiz));
                 dispatch(loadingQuestions(false));
@@ -65,9 +66,9 @@ export function fetchQuiz(url: string) {
 
 }
 
-export function fetchAnswers(url: string) {
+export function fetchAnswers(url: string, time: number = delay) {
     return (dispatch: Dispatch, getState: GetState) => {
-        return QuizApi.getAnswers()
+        return QuizApi.getAnswers(time)
             .then(answers => {
                 const {quiz} = getState();
                 let questions = quiz.questions;

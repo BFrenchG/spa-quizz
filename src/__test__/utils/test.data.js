@@ -9,7 +9,7 @@ export const dummyQuiz: Quiz = {
             option: 'Lyon'
         }, {
             id: 1,
-            option: 'Lodon'
+            option: 'London'
         }, {
             id: 2,
             option: 'Paris'
@@ -62,7 +62,7 @@ export const answeredQuiz: Quiz = {
             option: 'Lyon'
         }, {
             id: 1,
-            option: 'Lodon'
+            option: 'London'
         }, {
             id: 2,
             option: 'Paris'
