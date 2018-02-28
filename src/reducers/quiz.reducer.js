@@ -15,9 +15,6 @@ const quiz = (state: Quiz = defaultState, action: Action): Quiz => {
         switch (action.type) {
             case 'LOAD_QUIZ':
                 return action.quiz;
-            case 'LOAD_ANSWERS':
-                return Object.assign({}, state,
-                    {answers: action.answers});
             case 'QUIZ_LOADING':
                 return Object.assign({}, state,
                     {isLoading: action.isLoading});

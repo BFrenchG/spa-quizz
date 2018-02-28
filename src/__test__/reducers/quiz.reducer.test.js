@@ -1,126 +1,72 @@
 // @flow
 
-import {loadAllQuestions, fetchAnswers} from '../../actions/quiz.actions';
+import {
+    loadAllQuestions, fetchAnswers, loadingQuestions, selectAnswer, setScore,
+    setQuestionInfo, setQuizError
+} from '../../actions/quiz.actions';
 import quiz from '../../reducers/quiz.reducer';
+import type {Quiz} from "../../types/qizz.type";
+import {dummyQuiz} from "../test-helpers/test.data";
+
+const defaultQuiz: Quiz = {
+    id: 0,
+    title: '',
+    questions: [],
+    isLoading: false
+};
+
 
 describe('todos reducer', () => {
 
     it('should handle LOAD_QUIZ', () => {
-        const dummyQuizz = {
-            id: 0,
-            title: 'Random Quiz',
-            questions: [{
-                id: 0,
-                title: 'Capital of England',
-                options: [{
-                    id: 0,
-                    option: 'Lyon'
-                }, {
-                    id: 1,
-                    option: 'Lodon'
-                }, {
-                    id: 2,
-                    option: 'Paris'
-                }],
-                info: ''
-            }],
-            isLoading: false
-        };
-        expect(quiz(dummyQuizz, loadAllQuestions(true))).toEqual([
-            {
-                text: 'Run the tests',
-                completed: false,
-                id: 0
-            }
-        ]);
-
-        expect(
-            todos(
-                [
-                    {
-                        text: 'Run the tests',
-                        completed: false,
-                        id: 0
-                    }
-                ],
-                addTodo('Use Redux')
-            )
-        ).toEqual([
-            {
-                text: 'Run the tests',
-                completed: false,
-                id: 0
-            },
-            {
-                text: 'Use Redux',
-                completed: false,
-                id: 1
-            }
-        ]);
-
-        expect(
-            todos(
-                [
-                    {
-                        text: 'Run the tests',
-                        completed: false,
-                        id: 0
-                    },
-                    {
-                        text: 'Use Redux',
-                        completed: false,
-                        id: 1
-                    }
-                ],
-                addTodo('Fix the tests')
-            )
-        ).toEqual([
-            {
-                text: 'Run the tests',
-                completed: false,
-                id: 0
-            },
-            {
-                text: 'Use Redux',
-                completed: false,
-                id: 1
-            },
-            {
-                text: 'Fix the tests',
-                completed: false,
-                id: 2
-            }
-        ]);
+        expect(quiz(defaultQuiz, loadAllQuestions(dummyQuiz))).toEqual(
+            dummyQuiz
+        );
     });
 
-    it('should handle TOGGLE_TODO', () => {
+    it('should handle QUIZ_LOADING', () => {
+        expect(quiz({isLoading: false}, loadingQuestions(true))).toEqual(
+            {isLoading: true}
+        );
+    });
+
+    it('should handle SELECT_ANSWER', () => {
         expect(
-            todos(
-                [
-                    {
-                        text: 'Run the tests',
-                        completed: false,
-                        id: 1
-                    },
-                    {
-                        text: 'Use Redux',
-                        completed: false,
-                        id: 0
-                    }
-                ],
-                toggleTodo(1)
+            quiz(
+                {"id": 0, "isLoading": false, "questions": [{"id": 0, "option": "True"}], "title": ""},
+                selectAnswer(0, 1)
             )
-        ).toEqual([
-            {
-                text: 'Run the tests',
-                completed: true,
-                id: 1
-            },
-            {
-                text: 'Use Redux',
-                completed: false,
-                id: 0
-            }
-        ]);
+        ).toEqual({
+            "id": 0,
+            "isLoading": false,
+            "questions": [{"id": 0, "option": "True", "selected": 1}],
+            "title": ""
+        });
+    });
+
+    it('should handle SET_SCORE', () => {
+        expect(quiz({}, setScore(100))).toEqual(
+            {score: 100}
+        );
+    });
+
+    it('should handle SET_QUESTION_INFO', () => {
+        expect(
+            quiz(
+                {"id": 0, "isLoading": false, "questions": [{"id": 0, "option": "True"}], "title": ""},
+                setQuestionInfo(0, "test message", false)
+            )
+        ).toEqual({
+            "id": 0,
+            "isLoading": false,
+            "questions": [{"id": 0, "info": "test message", "option": "True", "warning": false}],
+            "title": ""
+        });
+    });
+
+    it('should handle SET_QUIZ_ERROR', () => {
+        expect(quiz({error: ""}, setQuizError("test error"))).toEqual(
+            {error: "test error"}
+        );
     });
 });

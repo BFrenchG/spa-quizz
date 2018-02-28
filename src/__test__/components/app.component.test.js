@@ -3,8 +3,7 @@
 import React from 'react';
 import configureStore from 'redux-mock-store';
 import { shallow } from 'enzyme';
-
-import App from '../../components/app.compoment';
+import App from "../../components/app.compoment";
 
 const setup = (setupProps = {}) => {
     const store = configureStore()();
@@ -15,8 +14,6 @@ const setup = (setupProps = {}) => {
         wrapper
     };
 };
-
-
 
 describe('App', () => {
     test('renders without crashing', () => {

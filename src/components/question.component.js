@@ -4,8 +4,8 @@ import React from 'react';
 import type {Id, Question} from '../types/qizz.type';
 import Card from 'material-ui/Card';
 import Radio from 'material-ui/Radio';
-import FormControl from "material-ui/es/Form/FormControl";
-import FormControlLabel from "material-ui/es/Form/FormControlLabel";
+import FormControl from "material-ui/Form/FormControl";
+import FormControlLabel from "material-ui/Form/FormControlLabel";
 
 export type Props = {
     question: Question,

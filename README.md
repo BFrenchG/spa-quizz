@@ -16,6 +16,7 @@
 <h1>Future Improvements</h1>
 <p>
 - separate reducers, actions and type into more appropriate sub components
+- more thorough testing of component display
 - better error handling and clearing
 - redux-saga or observable library to handle cancellation and async data with more grace
 - in depth testing of HTTP performance

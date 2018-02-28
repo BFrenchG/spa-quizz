@@ -42,7 +42,6 @@ export type QuizzState = {
 
 export type QuizzActions =
     | { type: 'LOAD_QUIZ', +quiz: Quiz }
-    | { type: 'LOAD_ANSWERS', +answers: Array<Answer> }
     | { type: 'QUIZ_LOADING', +isLoading: boolean }
     | { type: 'SELECT_ANSWER', +questionId: Id, +optionId: Id }
     | { type: 'SET_SCORE', +score: number }

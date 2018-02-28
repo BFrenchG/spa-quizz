@@ -1,0 +1,1337 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuestionPage calls handleChange when option is selected 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <QuestionPage
+    getQuestions={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+      }
+    }
+    onOptionSelect={[MockFunction]}
+    onSubmit={[MockFunction]}
+    quiz={
+      Object {
+        "id": 0,
+        "questions": Array [
+          Object {
+            "id": 0,
+            "info": "",
+            "options": Array [
+              Object {
+                "id": 0,
+                "option": "Lyon",
+              },
+              Object {
+                "id": 1,
+                "option": "Lodon",
+              },
+              Object {
+                "id": 2,
+                "option": "Paris",
+              },
+            ],
+            "title": "Capital of England",
+          },
+          Object {
+            "id": 1,
+            "info": "",
+            "options": Array [
+              Object {
+                "id": 0,
+                "option": "True",
+              },
+              Object {
+                "id": 1,
+                "option": "False",
+              },
+            ],
+            "title": "React is awesome",
+          },
+          Object {
+            "id": 2,
+            "info": "",
+            "options": Array [
+              Object {
+                "id": 0,
+                "option": "True",
+              },
+              Object {
+                "id": 1,
+                "option": "False",
+              },
+            ],
+            "title": "Flow is powerful",
+          },
+          Object {
+            "id": 3,
+            "info": "",
+            "options": Array [
+              Object {
+                "id": 0,
+                "option": "True",
+              },
+              Object {
+                "id": 1,
+                "option": "False",
+              },
+            ],
+            "title": "Marmite is great",
+          },
+        ],
+        "title": "Random Quiz",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1
+          style={
+            Object {
+              "color": "white",
+              "paddingLeft": "2px",
+            }
+          }
+        >
+          Random Quiz
+        </h1>,
+        <hr />,
+        Array [
+          <QuestionCard
+            handleChange={[MockFunction]}
+            question={
+              Object {
+                "id": 0,
+                "info": "",
+                "options": Array [
+                  Object {
+                    "id": 0,
+                    "option": "Lyon",
+                  },
+                  Object {
+                    "id": 1,
+                    "option": "Lodon",
+                  },
+                  Object {
+                    "id": 2,
+                    "option": "Paris",
+                  },
+                ],
+                "title": "Capital of England",
+              }
+            }
+            quizSubmitted={false}
+          />,
+          <QuestionCard
+            handleChange={[MockFunction]}
+            question={
+              Object {
+                "id": 1,
+                "info": "",
+                "options": Array [
+                  Object {
+                    "id": 0,
+                    "option": "True",
+                  },
+                  Object {
+                    "id": 1,
+                    "option": "False",
+                  },
+                ],
+                "title": "React is awesome",
+              }
+            }
+            quizSubmitted={false}
+          />,
+          <QuestionCard
+            handleChange={[MockFunction]}
+            question={
+              Object {
+                "id": 2,
+                "info": "",
+                "options": Array [
+                  Object {
+                    "id": 0,
+                    "option": "True",
+                  },
+                  Object {
+                    "id": 1,
+                    "option": "False",
+                  },
+                ],
+                "title": "Flow is powerful",
+              }
+            }
+            quizSubmitted={false}
+          />,
+          <QuestionCard
+            handleChange={[MockFunction]}
+            question={
+              Object {
+                "id": 3,
+                "info": "",
+                "options": Array [
+                  Object {
+                    "id": 0,
+                    "option": "True",
+                  },
+                  Object {
+                    "id": 1,
+                    "option": "False",
+                  },
+                ],
+                "title": "Marmite is great",
+              }
+            }
+            quizSubmitted={false}
+          />,
+        ],
+        <WithStyles(Button)
+          color="secondary"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "2px",
+            }
+          }
+          variant="raised"
+        >
+          Submit
+        </WithStyles(Button)>,
+        "",
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Random Quiz",
+          "style": Object {
+            "color": "white",
+            "paddingLeft": "2px",
+          },
+        },
+        "ref": null,
+        "rendered": "Random Quiz",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "handleChange": [MockFunction],
+          "question": Object {
+            "id": 0,
+            "info": "",
+            "options": Array [
+              Object {
+                "id": 0,
+                "option": "Lyon",
+              },
+              Object {
+                "id": 1,
+                "option": "Lodon",
+              },
+              Object {
+                "id": 2,
+                "option": "Paris",
+              },
+            ],
+            "title": "Capital of England",
+          },
+          "quizSubmitted": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "handleChange": [MockFunction],
+          "question": Object {
+            "id": 1,
+            "info": "",
+            "options": Array [
+              Object {
+                "id": 0,
+                "option": "True",
+              },
+              Object {
+                "id": 1,
+                "option": "False",
+              },
+            ],
+            "title": "React is awesome",
+          },
+          "quizSubmitted": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "function",
+        "props": Object {
+          "handleChange": [MockFunction],
+          "question": Object {
+            "id": 2,
+            "info": "",
+            "options": Array [
+              Object {
+                "id": 0,
+                "option": "True",
+              },
+              Object {
+                "id": 1,
+                "option": "False",
+              },
+            ],
+            "title": "Flow is powerful",
+          },
+          "quizSubmitted": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "3",
+        "nodeType": "function",
+        "props": Object {
+          "handleChange": [MockFunction],
+          "question": Object {
+            "id": 3,
+            "info": "",
+            "options": Array [
+              Object {
+                "id": 0,
+                "option": "True",
+              },
+              Object {
+                "id": 1,
+                "option": "False",
+              },
+            ],
+            "title": "Marmite is great",
+          },
+          "quizSubmitted": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Submit",
+          "color": "secondary",
+          "onClick": [Function],
+          "style": Object {
+            "marginLeft": "2px",
+          },
+          "variant": "raised",
+        },
+        "ref": null,
+        "rendered": "Submit",
+        "type": [Function],
+      },
+      "",
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            style={
+              Object {
+                "color": "white",
+                "paddingLeft": "2px",
+              }
+            }
+          >
+            Random Quiz
+          </h1>,
+          <hr />,
+          Array [
+            <QuestionCard
+              handleChange={[MockFunction]}
+              question={
+                Object {
+                  "id": 0,
+                  "info": "",
+                  "options": Array [
+                    Object {
+                      "id": 0,
+                      "option": "Lyon",
+                    },
+                    Object {
+                      "id": 1,
+                      "option": "Lodon",
+                    },
+                    Object {
+                      "id": 2,
+                      "option": "Paris",
+                    },
+                  ],
+                  "title": "Capital of England",
+                }
+              }
+              quizSubmitted={false}
+            />,
+            <QuestionCard
+              handleChange={[MockFunction]}
+              question={
+                Object {
+                  "id": 1,
+                  "info": "",
+                  "options": Array [
+                    Object {
+                      "id": 0,
+                      "option": "True",
+                    },
+                    Object {
+                      "id": 1,
+                      "option": "False",
+                    },
+                  ],
+                  "title": "React is awesome",
+                }
+              }
+              quizSubmitted={false}
+            />,
+            <QuestionCard
+              handleChange={[MockFunction]}
+              question={
+                Object {
+                  "id": 2,
+                  "info": "",
+                  "options": Array [
+                    Object {
+                      "id": 0,
+                      "option": "True",
+                    },
+                    Object {
+                      "id": 1,
+                      "option": "False",
+                    },
+                  ],
+                  "title": "Flow is powerful",
+                }
+              }
+              quizSubmitted={false}
+            />,
+            <QuestionCard
+              handleChange={[MockFunction]}
+              question={
+                Object {
+                  "id": 3,
+                  "info": "",
+                  "options": Array [
+                    Object {
+                      "id": 0,
+                      "option": "True",
+                    },
+                    Object {
+                      "id": 1,
+                      "option": "False",
+                    },
+                  ],
+                  "title": "Marmite is great",
+                }
+              }
+              quizSubmitted={false}
+            />,
+          ],
+          <WithStyles(Button)
+            color="secondary"
+            onClick={[Function]}
+            style={
+              Object {
+                "marginLeft": "2px",
+              }
+            }
+            variant="raised"
+          >
+            Submit
+          </WithStyles(Button)>,
+          "",
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Random Quiz",
+            "style": Object {
+              "color": "white",
+              "paddingLeft": "2px",
+            },
+          },
+          "ref": null,
+          "rendered": "Random Quiz",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "handleChange": [MockFunction],
+            "question": Object {
+              "id": 0,
+              "info": "",
+              "options": Array [
+                Object {
+                  "id": 0,
+                  "option": "Lyon",
+                },
+                Object {
+                  "id": 1,
+                  "option": "Lodon",
+                },
+                Object {
+                  "id": 2,
+                  "option": "Paris",
+                },
+              ],
+              "title": "Capital of England",
+            },
+            "quizSubmitted": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "handleChange": [MockFunction],
+            "question": Object {
+              "id": 1,
+              "info": "",
+              "options": Array [
+                Object {
+                  "id": 0,
+                  "option": "True",
+                },
+                Object {
+                  "id": 1,
+                  "option": "False",
+                },
+              ],
+              "title": "React is awesome",
+            },
+            "quizSubmitted": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "function",
+          "props": Object {
+            "handleChange": [MockFunction],
+            "question": Object {
+              "id": 2,
+              "info": "",
+              "options": Array [
+                Object {
+                  "id": 0,
+                  "option": "True",
+                },
+                Object {
+                  "id": 1,
+                  "option": "False",
+                },
+              ],
+              "title": "Flow is powerful",
+            },
+            "quizSubmitted": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "3",
+          "nodeType": "function",
+          "props": Object {
+            "handleChange": [MockFunction],
+            "question": Object {
+              "id": 3,
+              "info": "",
+              "options": Array [
+                Object {
+                  "id": 0,
+                  "option": "True",
+                },
+                Object {
+                  "id": 1,
+                  "option": "False",
+                },
+              ],
+              "title": "Marmite is great",
+            },
+            "quizSubmitted": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Submit",
+            "color": "secondary",
+            "onClick": [Function],
+            "style": Object {
+              "marginLeft": "2px",
+            },
+            "variant": "raised",
+          },
+          "ref": null,
+          "rendered": "Submit",
+          "type": [Function],
+        },
+        "",
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`QuestionPage renders without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <QuestionPage
+    getQuestions={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+      }
+    }
+    onOptionSelect={[MockFunction]}
+    onSubmit={[MockFunction]}
+    quiz={
+      Object {
+        "id": 0,
+        "questions": Array [
+          Object {
+            "id": 0,
+            "info": "",
+            "options": Array [
+              Object {
+                "id": 0,
+                "option": "Lyon",
+              },
+              Object {
+                "id": 1,
+                "option": "Lodon",
+              },
+              Object {
+                "id": 2,
+                "option": "Paris",
+              },
+            ],
+            "title": "Capital of England",
+          },
+          Object {
+            "id": 1,
+            "info": "",
+            "options": Array [
+              Object {
+                "id": 0,
+                "option": "True",
+              },
+              Object {
+                "id": 1,
+                "option": "False",
+              },
+            ],
+            "title": "React is awesome",
+          },
+          Object {
+            "id": 2,
+            "info": "",
+            "options": Array [
+              Object {
+                "id": 0,
+                "option": "True",
+              },
+              Object {
+                "id": 1,
+                "option": "False",
+              },
+            ],
+            "title": "Flow is powerful",
+          },
+          Object {
+            "id": 3,
+            "info": "",
+            "options": Array [
+              Object {
+                "id": 0,
+                "option": "True",
+              },
+              Object {
+                "id": 1,
+                "option": "False",
+              },
+            ],
+            "title": "Marmite is great",
+          },
+        ],
+        "title": "Random Quiz",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1
+          style={
+            Object {
+              "color": "white",
+              "paddingLeft": "2px",
+            }
+          }
+        >
+          Random Quiz
+        </h1>,
+        <hr />,
+        Array [
+          <QuestionCard
+            handleChange={[MockFunction]}
+            question={
+              Object {
+                "id": 0,
+                "info": "",
+                "options": Array [
+                  Object {
+                    "id": 0,
+                    "option": "Lyon",
+                  },
+                  Object {
+                    "id": 1,
+                    "option": "Lodon",
+                  },
+                  Object {
+                    "id": 2,
+                    "option": "Paris",
+                  },
+                ],
+                "title": "Capital of England",
+              }
+            }
+            quizSubmitted={false}
+          />,
+          <QuestionCard
+            handleChange={[MockFunction]}
+            question={
+              Object {
+                "id": 1,
+                "info": "",
+                "options": Array [
+                  Object {
+                    "id": 0,
+                    "option": "True",
+                  },
+                  Object {
+                    "id": 1,
+                    "option": "False",
+                  },
+                ],
+                "title": "React is awesome",
+              }
+            }
+            quizSubmitted={false}
+          />,
+          <QuestionCard
+            handleChange={[MockFunction]}
+            question={
+              Object {
+                "id": 2,
+                "info": "",
+                "options": Array [
+                  Object {
+                    "id": 0,
+                    "option": "True",
+                  },
+                  Object {
+                    "id": 1,
+                    "option": "False",
+                  },
+                ],
+                "title": "Flow is powerful",
+              }
+            }
+            quizSubmitted={false}
+          />,
+          <QuestionCard
+            handleChange={[MockFunction]}
+            question={
+              Object {
+                "id": 3,
+                "info": "",
+                "options": Array [
+                  Object {
+                    "id": 0,
+                    "option": "True",
+                  },
+                  Object {
+                    "id": 1,
+                    "option": "False",
+                  },
+                ],
+                "title": "Marmite is great",
+              }
+            }
+            quizSubmitted={false}
+          />,
+        ],
+        <WithStyles(Button)
+          color="secondary"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": "2px",
+            }
+          }
+          variant="raised"
+        >
+          Submit
+        </WithStyles(Button)>,
+        "",
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Random Quiz",
+          "style": Object {
+            "color": "white",
+            "paddingLeft": "2px",
+          },
+        },
+        "ref": null,
+        "rendered": "Random Quiz",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "handleChange": [MockFunction],
+          "question": Object {
+            "id": 0,
+            "info": "",
+            "options": Array [
+              Object {
+                "id": 0,
+                "option": "Lyon",
+              },
+              Object {
+                "id": 1,
+                "option": "Lodon",
+              },
+              Object {
+                "id": 2,
+                "option": "Paris",
+              },
+            ],
+            "title": "Capital of England",
+          },
+          "quizSubmitted": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "handleChange": [MockFunction],
+          "question": Object {
+            "id": 1,
+            "info": "",
+            "options": Array [
+              Object {
+                "id": 0,
+                "option": "True",
+              },
+              Object {
+                "id": 1,
+                "option": "False",
+              },
+            ],
+            "title": "React is awesome",
+          },
+          "quizSubmitted": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "function",
+        "props": Object {
+          "handleChange": [MockFunction],
+          "question": Object {
+            "id": 2,
+            "info": "",
+            "options": Array [
+              Object {
+                "id": 0,
+                "option": "True",
+              },
+              Object {
+                "id": 1,
+                "option": "False",
+              },
+            ],
+            "title": "Flow is powerful",
+          },
+          "quizSubmitted": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "3",
+        "nodeType": "function",
+        "props": Object {
+          "handleChange": [MockFunction],
+          "question": Object {
+            "id": 3,
+            "info": "",
+            "options": Array [
+              Object {
+                "id": 0,
+                "option": "True",
+              },
+              Object {
+                "id": 1,
+                "option": "False",
+              },
+            ],
+            "title": "Marmite is great",
+          },
+          "quizSubmitted": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Submit",
+          "color": "secondary",
+          "onClick": [Function],
+          "style": Object {
+            "marginLeft": "2px",
+          },
+          "variant": "raised",
+        },
+        "ref": null,
+        "rendered": "Submit",
+        "type": [Function],
+      },
+      "",
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            style={
+              Object {
+                "color": "white",
+                "paddingLeft": "2px",
+              }
+            }
+          >
+            Random Quiz
+          </h1>,
+          <hr />,
+          Array [
+            <QuestionCard
+              handleChange={[MockFunction]}
+              question={
+                Object {
+                  "id": 0,
+                  "info": "",
+                  "options": Array [
+                    Object {
+                      "id": 0,
+                      "option": "Lyon",
+                    },
+                    Object {
+                      "id": 1,
+                      "option": "Lodon",
+                    },
+                    Object {
+                      "id": 2,
+                      "option": "Paris",
+                    },
+                  ],
+                  "title": "Capital of England",
+                }
+              }
+              quizSubmitted={false}
+            />,
+            <QuestionCard
+              handleChange={[MockFunction]}
+              question={
+                Object {
+                  "id": 1,
+                  "info": "",
+                  "options": Array [
+                    Object {
+                      "id": 0,
+                      "option": "True",
+                    },
+                    Object {
+                      "id": 1,
+                      "option": "False",
+                    },
+                  ],
+                  "title": "React is awesome",
+                }
+              }
+              quizSubmitted={false}
+            />,
+            <QuestionCard
+              handleChange={[MockFunction]}
+              question={
+                Object {
+                  "id": 2,
+                  "info": "",
+                  "options": Array [
+                    Object {
+                      "id": 0,
+                      "option": "True",
+                    },
+                    Object {
+                      "id": 1,
+                      "option": "False",
+                    },
+                  ],
+                  "title": "Flow is powerful",
+                }
+              }
+              quizSubmitted={false}
+            />,
+            <QuestionCard
+              handleChange={[MockFunction]}
+              question={
+                Object {
+                  "id": 3,
+                  "info": "",
+                  "options": Array [
+                    Object {
+                      "id": 0,
+                      "option": "True",
+                    },
+                    Object {
+                      "id": 1,
+                      "option": "False",
+                    },
+                  ],
+                  "title": "Marmite is great",
+                }
+              }
+              quizSubmitted={false}
+            />,
+          ],
+          <WithStyles(Button)
+            color="secondary"
+            onClick={[Function]}
+            style={
+              Object {
+                "marginLeft": "2px",
+              }
+            }
+            variant="raised"
+          >
+            Submit
+          </WithStyles(Button)>,
+          "",
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Random Quiz",
+            "style": Object {
+              "color": "white",
+              "paddingLeft": "2px",
+            },
+          },
+          "ref": null,
+          "rendered": "Random Quiz",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "handleChange": [MockFunction],
+            "question": Object {
+              "id": 0,
+              "info": "",
+              "options": Array [
+                Object {
+                  "id": 0,
+                  "option": "Lyon",
+                },
+                Object {
+                  "id": 1,
+                  "option": "Lodon",
+                },
+                Object {
+                  "id": 2,
+                  "option": "Paris",
+                },
+              ],
+              "title": "Capital of England",
+            },
+            "quizSubmitted": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "handleChange": [MockFunction],
+            "question": Object {
+              "id": 1,
+              "info": "",
+              "options": Array [
+                Object {
+                  "id": 0,
+                  "option": "True",
+                },
+                Object {
+                  "id": 1,
+                  "option": "False",
+                },
+              ],
+              "title": "React is awesome",
+            },
+            "quizSubmitted": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "function",
+          "props": Object {
+            "handleChange": [MockFunction],
+            "question": Object {
+              "id": 2,
+              "info": "",
+              "options": Array [
+                Object {
+                  "id": 0,
+                  "option": "True",
+                },
+                Object {
+                  "id": 1,
+                  "option": "False",
+                },
+              ],
+              "title": "Flow is powerful",
+            },
+            "quizSubmitted": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "3",
+          "nodeType": "function",
+          "props": Object {
+            "handleChange": [MockFunction],
+            "question": Object {
+              "id": 3,
+              "info": "",
+              "options": Array [
+                Object {
+                  "id": 0,
+                  "option": "True",
+                },
+                Object {
+                  "id": 1,
+                  "option": "False",
+                },
+              ],
+              "title": "Marmite is great",
+            },
+            "quizSubmitted": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Submit",
+            "color": "secondary",
+            "onClick": [Function],
+            "style": Object {
+              "marginLeft": "2px",
+            },
+            "variant": "raised",
+          },
+          "ref": null,
+          "rendered": "Submit",
+          "type": [Function],
+        },
+        "",
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

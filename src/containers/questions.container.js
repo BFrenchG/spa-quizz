@@ -19,7 +19,6 @@ const mapStateToProps = (state: State) => {
 const mapDispatchToProps = (dispatch: Dispatch) => {
     return {
         getQuestions: () => {
-            console.log(typeof fetchQuiz("/dummy/url"));
             dispatch(fetchQuiz("/dummy/url"));
         },
         onOptionSelect: (questionId: Id, optionId: Id) => {

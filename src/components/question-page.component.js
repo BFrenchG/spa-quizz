@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 
 import type {Id, Question, Quiz} from '../types/qizz.type';
 import QuestionCard from './question.component';
-import Button from 'material-ui/es/Button/Button';
+import Button from 'material-ui/Button/Button';
 import Score from './score.component';
 
 
@@ -45,8 +45,7 @@ class QuestionPage extends Component<Props> {
     };
 
     render() {
-        console.log(this.props.quiz.error);
-
+        // console.log(this.props);
         if (!this.props.quiz && this.props.quiz.error) {
             return (
                 <div>
