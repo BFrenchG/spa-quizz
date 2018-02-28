@@ -60,7 +60,6 @@ describe('todos reducer', () => {
         return store.dispatch(fetchAnswers("/url", 2500))
             .then(() => {
                 const actions = store.getActions();
-                console.log(actions);
                 expect(actions[0]).toEqual(setQuizError('Answer Load Timeout'));
             })
     });

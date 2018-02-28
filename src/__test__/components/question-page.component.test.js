@@ -17,8 +17,6 @@ const setup = (setupProps = {}) => {
 
     const props = {...defaultProps, ...setupProps};
 
-    console.log(dummyQuiz);
-
     const wrapper = shallow(<QuestionPage quiz={props.quiz}
                                           getQuestions={props.getQuestions}
                                           onOptionSelect={props.onOptionSelect}

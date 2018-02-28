@@ -45,7 +45,6 @@ class QuestionPage extends Component<Props> {
     };
 
     render() {
-        // console.log(this.props);
         if (!this.props.quiz && this.props.quiz.error) {
             return (
                 <div>
